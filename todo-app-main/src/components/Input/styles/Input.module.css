@@ -1,0 +1,19 @@
+.input {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+.input input {
+  border: none;
+  outline: none;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--clr-dark-gray-blue);
+  margin-top: 3px;
+}
+.input input::placeholder {
+  color: var(--clr-dark-gray-blue);
+}

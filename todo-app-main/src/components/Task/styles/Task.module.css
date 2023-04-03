@@ -1,0 +1,34 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  border-bottom: thin solid var(--clr-light-gray-blue);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+.text {
+  color: var(--clr-dark-gray-blue);
+  font-size: 0.7rem;
+  color: var(--clr-darker-gray-blue);
+}
+
+.dashed {
+  text-decoration: line-through;
+  text-decoration-color: var(--clr-light-gray-blue);
+  color: var(--clr-light-gray-blue);
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.completed {
+  color: var(--clr-dark-gray-blue);
+}
+
+.delete {
+  padding: 0.2rem;
+}

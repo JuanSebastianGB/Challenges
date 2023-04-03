@@ -1,0 +1,8 @@
+.hero-image {
+  position: absolute;
+  min-width: 100%;
+}
+.image {
+  width: inherit;
+  object-position: center;
+}

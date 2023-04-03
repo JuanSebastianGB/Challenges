@@ -1,0 +1,15 @@
+.clear-completed {
+  cursor: pointer;
+}
+.tasks {
+  background-color: var(--clr-very-light-gray);
+  border-radius: 0.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1.3rem;
+  color: var(--clr-dark-gray-blue);
+  font-size: 0.8rem;
+}

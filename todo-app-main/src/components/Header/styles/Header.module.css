@@ -1,0 +1,9 @@
+.header {
+  color: var(--clr-very-light-gray);
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  letter-spacing: 0.5rem;
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  font-size: 1.125rem;
+  --ff: 'Josefin Sans', sans-serif;
+
+  /* Primary */
+  --clr-primary: hsl(220, 98%, 61%);
+  --gradient: linear-gradient(
+    to bottom right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  /* font weight */
+  --fw-bold: 700;
+  --fw-normal: 400;
+
+  /* Light theme */
+  --clr-very-light-gray: hsl(0, 0%, 98%);
+  --clr-very-light-gray-blue: hsl(236, 33%, 92%);
+
+  --clr-light-gray-blue: hsl(233, 11%, 84%);
+
+  --clr-dark-gray-blue: hsl(236, 9%, 61%);
+  --clr-darker-gray-blue: hsl(236, 9%, 40%);
+}
+
+body {
+  font-family: var(--ff);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.app {
+  background-color: var(--clr-very-light-gray-blue);
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.flex-group {
+  display: flex;
+  color: var(--clr-dark-gray-blue);
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  position: sticky;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.filter {
+  background-color: var(--clr-very-light-gray);
+}
+
+.header {
+  color: var(--clr-very-light-gray);
+}
+.hero-image {
+  position: absolute;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.task.complete .task__text {
+  text-decoration: dashed;
+}
+
+footer {
+  text-align: center;
+}
+
+.tasks {
+  background-color: var(--clr-very-light-gray);
+  border-radius: 0.5rem;
+}
