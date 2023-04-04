@@ -1,25 +1,24 @@
 import { forwardRef, useEffect, useState } from 'react';
-import {
-  useFunctionContext,
-  useStateContext,
-} from '../../context/ContextProvider';
+import { useTasks } from '../../context/ContextProvider';
 import Check from '../../icons/Check';
 import styles from './styles/Input.module.css';
 
-const Input = forwardRef((props, ref) => {
+const Input = forwardRef((_, ref) => {
   const [inputData, setInputData] = useState('');
-  const tasks = useStateContext();
-  const setTasks = useFunctionContext();
+  const { tasks, setTasks, setFilteredTasks } = useTasks();
+
   const handleInsertTask = (e) => {
     if (e.key === 'Enter') {
-      setTasks([
+      const newData = [
         ...tasks,
         {
           id: Number(tasks.at(-1).id + 1),
           completed: false,
           content: inputData,
         },
-      ]);
+      ];
+      setTasks(newData);
+      setFilteredTasks(newData);
       setInputData('');
     }
   };

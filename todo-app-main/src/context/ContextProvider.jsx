@@ -30,6 +30,15 @@ export const ContextProvider = ({ children }) => {
   );
 };
 
+export const useTasks = () => {
+  return {
+    tasks: useContext(Context)[0],
+    setTasks: useContext(Context)[1],
+    filteredTasks: useContext(Context)[2],
+    setFilteredTasks: useContext(Context)[3],
+  };
+};
+
 export const useStateContext = () => {
   return useContext(Context)[0];
 };

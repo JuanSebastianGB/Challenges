@@ -1,26 +1,23 @@
-import {
-  useFunctionContext,
-  useFunctionFilteredContext,
-  useStateContext,
-  useStateFilteredContext,
-} from '../../context/ContextProvider';
+import { useCallback, useMemo } from 'react';
+import { useTasks } from '../../context/ContextProvider';
+import useDeleteCompletedTasks from '../../hooks/useDeleteCompletedTasks';
 import Task from '../Task/Task';
 import styles from './styles/Tasks.module.css';
 
 const Tasks = () => {
-  const tasks = useStateContext();
-  const setTasks = useFunctionContext();
+  const { tasks, filteredTasks } = useTasks();
+  const deleteCompletedTasks = useDeleteCompletedTasks();
 
-  const filteredTasks = useStateFilteredContext();
-  const setFilteredTasks = useFunctionFilteredContext();
+  const handleDeleteCompleted = useCallback(() => {
+    const completedTasks = tasks.filter((task) => task.completed);
+    deleteCompletedTasks(completedTasks);
+  }, [deleteCompletedTasks, tasks]);
 
-  const handleDeleteCompleted = () => {
-    const result = tasks.filter(({ completed }) => !completed);
-    setTasks(result);
-    setFilteredTasks(result);
-  };
+  const pending = useMemo(
+    () => tasks.filter((task) => !task.completed).length,
+    [tasks]
+  );
 
-  const pending = tasks.filter(({ completed }) => !completed).length;
   const mappedTasks = filteredTasks.map((task) => (
     <div key={task.id}>
       <Task {...task} />

@@ -1,12 +1,7 @@
-import {
-  useFunctionFilteredContext,
-  useStateContext,
-} from '../../context/ContextProvider';
+import { useTasks } from '../../context/ContextProvider';
 import styles from './styles/Filter.module.css';
 const Filter = () => {
-  const tasks = useStateContext();
-
-  const setFilteredTasks = useFunctionFilteredContext();
+  const { tasks, setFilteredTasks } = useTasks();
 
   const handleFilterAll = () => {
     setFilteredTasks(tasks);
