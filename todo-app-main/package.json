@@ -7,7 +7,8 @@
     "vite": "^4.1.0-beta.0"
   },
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
     "eslint": "^8.0.1",
