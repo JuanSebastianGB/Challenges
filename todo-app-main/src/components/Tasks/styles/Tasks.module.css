@@ -4,6 +4,7 @@
 .tasks {
   background-color: var(--clr-very-light-gray);
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .footer {

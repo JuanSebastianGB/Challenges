@@ -12,7 +12,7 @@ const Input = forwardRef((_, ref) => {
       const newData = [
         ...tasks,
         {
-          id: Number(tasks.at(-1).id + 1),
+          id: tasks.length > 0 ? Number(tasks.at(-1).id + 1) : 1,
           completed: false,
           content: inputData,
         },

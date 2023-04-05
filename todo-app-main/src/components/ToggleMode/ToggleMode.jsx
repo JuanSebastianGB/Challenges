@@ -16,7 +16,7 @@ const ToggleMode = () => {
 
   return (
     <div className={styles.togglemode} onClick={handleToggle}>
-      {mode === 'light' ? <Sun /> : <Moon />}
+      {mode !== 'light' ? <Sun /> : <Moon />}
     </div>
   );
 };

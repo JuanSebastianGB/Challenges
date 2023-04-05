@@ -106,13 +106,21 @@ body {
 }
 
 .container {
-  max-width: 80%;
+  width: 80%;
   margin: 0 auto;
   display: grid;
   position: sticky;
   padding: 2rem 0;
   gap: 1rem;
+  border-radius: 10px 10px 0 0;
 }
+
+@media only screen and (min-width: 650px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
 .filter {
   background-color: var(--clr-very-light-gray);
 }
