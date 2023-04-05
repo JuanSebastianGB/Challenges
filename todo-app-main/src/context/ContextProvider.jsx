@@ -13,7 +13,8 @@ const Context = createContext({});
 export const ContextProvider = ({ children }) => {
   const [originalData, setOriginalData] = useState(data);
   const [filteredData, setFilteredData] = useState(originalData);
-  const [isFiltering, setIsFiltering] = useState(false);
+  const [mode, setMode] = useState('light');
+
   return (
     <Context.Provider
       value={[
@@ -21,8 +22,8 @@ export const ContextProvider = ({ children }) => {
         setOriginalData,
         filteredData,
         setFilteredData,
-        isFiltering,
-        setIsFiltering,
+        mode,
+        setMode,
       ]}
     >
       {children}
@@ -30,33 +31,17 @@ export const ContextProvider = ({ children }) => {
   );
 };
 
-export const useTasks = () => {
-  return {
-    tasks: useContext(Context)[0],
-    setTasks: useContext(Context)[1],
-    filteredTasks: useContext(Context)[2],
-    setFilteredTasks: useContext(Context)[3],
-  };
-};
+export const useTasks = () => ({
+  tasks: useContext(Context)[0],
+  setTasks: useContext(Context)[1],
+  filteredTasks: useContext(Context)[2],
+  setFilteredTasks: useContext(Context)[3],
+});
 
-export const useStateContext = () => {
-  return useContext(Context)[0];
-};
-export const useFunctionContext = () => {
-  return useContext(Context)[1];
-};
-export const useStateFilteredContext = () => {
-  return useContext(Context)[2];
-};
-export const useFunctionFilteredContext = () => {
-  return useContext(Context)[3];
-};
-export const useIsFiltering = () => {
-  return useContext(Context)[4];
-};
-export const useSetIsFiltering = () => {
-  return useContext(Context)[5];
-};
+export const useMode = () => ({
+  mode: useContext(Context)[4],
+  setMode: useContext(Context)[5],
+});
 
 ContextProvider.propTypes = {
   children: PropTypes.oneOfType([

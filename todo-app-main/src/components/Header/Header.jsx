@@ -1,4 +1,4 @@
-import Moon from '../../icons/Moon';
+import { ToggleMode } from '../ToggleMode';
 import styles from './styles/Header.module.css';
 
 const Header = () => {
@@ -6,7 +6,7 @@ const Header = () => {
     <div className={styles.header}>
       <h1>Todo</h1>
       <span className="icon">
-        <Moon />
+        <ToggleMode />
       </span>
     </div>
   );

@@ -5,6 +5,7 @@
   border-bottom: thin solid var(--clr-light-gray-blue);
   font-weight: var(--fw-bold);
   cursor: pointer;
+  background-color: var(--clr-white);
 }
 .text {
   color: var(--clr-dark-gray-blue);
