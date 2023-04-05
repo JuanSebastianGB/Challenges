@@ -1,18 +1,11 @@
 import PropTypes from 'prop-types';
-import {
-  useFunctionContext,
-  useFunctionFilteredContext,
-  useStateContext,
-} from '../../context/ContextProvider';
+import { useTasks } from '../../context/ContextProvider';
 import Check from '../../icons/Check';
 import Cross from '../../icons/Cross';
 import styles from './styles/Task.module.css';
 
 const Task = ({ content, completed, id }) => {
-  const tasks = useStateContext();
-  const setTasks = useFunctionContext();
-
-  const setFilteredTasks = useFunctionFilteredContext();
+  const { tasks, setTasks, setFilteredTasks } = useTasks();
 
   const handelToggleCompleteState = (e) => {
     const result = tasks.map((task) => {
