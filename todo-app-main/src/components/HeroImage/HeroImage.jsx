@@ -1,3 +1,5 @@
+import ImageDesktop from '../../images/bg-desktop-light.jpg';
+import ImageMobile from '../../images/bg-mobile-light.jpg';
 import styles from './styles/HeroImage.module.css';
 const HeroImage = () => {
   return (
@@ -6,12 +8,12 @@ const HeroImage = () => {
       <picture className={styles['hero-image']}>
         <source
           media="(min-width: 600px)"
-          srcSet="src/images/bg-desktop-light.jpg"
+          srcSet={ImageDesktop}
         />
         <img
           className={styles['hero-image']}
-          src="src/images/bg-mobile-light.jpg"
-          alt="Hero image"
+          src={ImageMobile}
+          alt="Hero image in mobile resolution"
         />
       </picture>
     </>
