@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.2rem;
-  border-bottom: thin solid var(--clr-light-gray-blue);
+  border-bottom: thin solid var(--clr-border);
   font-weight: var(--fw-bold);
   cursor: pointer;
   background-color: var(--clr-white);

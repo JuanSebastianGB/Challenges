@@ -67,6 +67,8 @@ h6 {
   --clr-very-light-gray: hsl(0, 0%, 98%);
   --clr-very-light-gray-blue: hsl(236, 33%, 92%);
 
+  --clr-border: #d2d3db;
+
   --clr-light-gray-blue: hsl(233, 11%, 84%);
 
   --clr-dark-gray-blue: hsl(236, 9%, 61%);
@@ -77,6 +79,8 @@ h6 {
 [data-theme='dark'] {
   --clr-very-light-gray: hsl(235, 21%, 11%);
   --clr-very-light-gray-blue: #181824;
+
+  --clr-border: #383b4e;
 
   --clr-light-gray-blue: hsl(234, 39%, 85%);
 

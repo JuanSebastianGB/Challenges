@@ -5,6 +5,7 @@
   padding: 0.9rem 1.2rem;
   border-radius: 0.5rem;
   align-items: center;
+  position: relative;
 }
 .input input {
   border: none;
@@ -20,4 +21,19 @@
 }
 .input input::placeholder {
   color: var(--clr-dark-gray-blue);
+}
+
+.container-error {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+}
+
+.container-error.error {
+  color: red;
+  text-align: center;
+  padding: 0;
+  margin-top: -12px;
+  display: block;
 }
