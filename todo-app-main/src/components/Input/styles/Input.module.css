@@ -1,7 +1,7 @@
 .input {
   display: flex;
   gap: 1rem;
-  background-color: white;
+  background-color: var(--clr-white);
   padding: 0.9rem 1.2rem;
   border-radius: 0.5rem;
   align-items: center;
@@ -13,6 +13,10 @@
   font-weight: 400;
   color: var(--clr-dark-gray-blue);
   margin-top: 3px;
+  background-color: inherit;
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 10px;
 }
 .input input::placeholder {
   color: var(--clr-dark-gray-blue);

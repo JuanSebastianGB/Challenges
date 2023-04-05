@@ -4,3 +4,4 @@ export * from './HeroImage';
 export * from './Input';
 export * from './Task';
 export * from './Tasks';
+export * from './ToggleMode';

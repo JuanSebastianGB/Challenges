@@ -1,5 +1,5 @@
 .header {
-  color: var(--clr-very-light-gray);
+  color: white;
   display: flex;
   justify-content: space-between;
 }
