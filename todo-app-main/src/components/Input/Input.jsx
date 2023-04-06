@@ -1,4 +1,5 @@
 import { forwardRef, useEffect, useState } from 'react';
+import { v4 as version4 } from 'uuid';
 import { useTasks } from '../../context/ContextProvider';
 import Check from '../../icons/Check';
 import styles from './styles/Input.module.css';
@@ -14,7 +15,7 @@ const Input = forwardRef((_, ref) => {
       const newData = [
         ...tasks,
         {
-          id: tasks.length > 0 ? Number(tasks.at(-1).id + 1) : 1,
+          id: tasks.length > 0 ? version4() : 1,
           completed: false,
           content: inputData,
         },
